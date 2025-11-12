@@ -1,8 +1,14 @@
 'use client';
 
-import { BookOpen, TrendingUp, Target, Lightbulb } from 'lucide-react';
+import { BookOpen, TrendingUp, Target, Lightbulb, BarChart3, Users, Award, Zap } from 'lucide-react';
 
 export default function CourseOverview() {
+  const stats = [
+    { label: 'Success Rate', value: '95%', change: '+12%', positive: true },
+    { label: 'Active Students', value: '2,500+', change: '+450', positive: true },
+    { label: 'Course Completion', value: '89%', change: '+8%', positive: true },
+    { label: 'Avg. ROI', value: '340%', change: '+25%', positive: true },
+  ];
   const features = [
     {
       icon: BookOpen,
@@ -38,13 +44,41 @@ export default function CourseOverview() {
   };
 
   return (
-    <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 relative overflow-hidden">
+      {/* Trading grid background */}
+      <div className="absolute inset-0 chart-pattern opacity-50"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Live Stats Ticker */}
+        <div className="mb-16 overflow-hidden">
+          <div className="glass-card rounded-2xl p-6 depth-shadow">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center reveal-animation" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <BarChart3 className="w-4 h-4 text-blue-600" />
+                    <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      {stat.label}
+                    </span>
+                  </div>
+                  <div className="text-3xl font-extrabold gradient-text mb-1">
+                    {stat.value}
+                  </div>
+                  <div className={`text-sm font-bold ${stat.positive ? 'text-green-600' : 'text-red-600'} flex items-center justify-center gap-1`}>
+                    <TrendingUp className="w-4 h-4" />
+                    {stat.change}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
             Why Choose <span className="gradient-text">Atal Trade Effort?</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-light">
             Our courses are designed to take you from beginner to expert,
             with a focus on practical skills and real-world applications.
           </p>
@@ -57,15 +91,25 @@ export default function CourseOverview() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-2xl border-2 ${colors.border} card-hover`}
+                className={`glass-card p-8 rounded-3xl border-2 ${colors.border} card-hover depth-shadow group relative overflow-hidden`}
               >
-                <div className={`${colors.bg} w-14 h-14 rounded-xl flex items-center justify-center mb-4`}>
-                  <Icon className={`w-7 h-7 ${colors.icon}`} />
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className={`${colors.bg} w-16 h-16 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <Icon className={`w-8 h-8 ${colors.icon}`} />
+                  </div>
+                  <h3 className="text-xl font-extrabold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  
+                  {/* Progress bar */}
+                  <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-600 to-purple-600 bar-grow" style={{ animationDelay: `${index * 200}ms` }}></div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
               </div>
             );
           })}
