@@ -7,65 +7,57 @@ export default function Level2Course() {
     {
       number: '1',
       icon: LineChart,
-      title: 'Technical Analysis Intro',
-      description: 'This section covers the basics of technical analysis and chart reading fundamentals.',
-      topics: ['What is Technical Analysis', 'Why Use Technical Analysis', 'Overview of Charts', 'Chart Types'],
+      title: 'Technical Analysis',
+      description: 'Chart reading fundamentals and analysis techniques',
       color: 'blue',
     },
     {
       number: '2',
       icon: CandlestickChart,
-      title: 'Candlestick PowerPack',
-      description: 'This section delves into candlestick patterns and their practical applications.',
-      topics: ['How to Create a Candle', 'Types of Candles', 'Morning Star', 'Evening Star', 'Advanced Patterns'],
+      title: 'Candlestick Patterns',
+      description: 'Advanced pattern recognition and applications',
       color: 'purple',
     },
     {
       number: '3',
       icon: Shield,
       title: 'Support & Resistance',
-      description: 'This section focuses on identifying key price levels and trading zones.',
-      topics: ['Previous Day Perspective', 'Swing Level Perspective', 'Big Candle Perspective', 'Higher High/Low', 'Central Pivot Range'],
+      description: 'Key price levels and trading zones',
       color: 'green',
     },
     {
       number: '4',
       icon: BarChart2,
-      title: 'Indicators',
-      description: 'This section introduces popular technical indicators for market analysis.',
-      topics: ['Moving Average', 'Central Pivot Range', 'VWAP', 'Pivot Points'],
+      title: 'Technical Indicators',
+      description: 'Popular indicators for market analysis',
       color: 'orange',
     },
     {
       number: '5',
       icon: TrendingUp,
-      title: 'Market Trends',
-      description: 'This section focuses on identifying and trading trends effectively.',
-      topics: ['Understanding Trend Lines', 'Short Term Trends', 'Long Term Trends', 'Trending & Trailing', 'Stop Loss Strategies'],
+      title: 'Trend Trading',
+      description: 'Identifying and trading market trends',
       color: 'red',
     },
     {
       number: '6',
       icon: Zap,
       title: 'Option Scalping',
-      description: 'This section introduces a short-term options trading strategy for quick profits.',
-      topics: ['Option Buy Strategies', 'Short Term Focus', 'High Volume Trading', 'Liquidity Management', 'Rapid Execution'],
+      description: 'Short-term trading for quick profits',
       color: 'indigo',
     },
     {
       number: '7',
       icon: Target,
-      title: 'Selling Strategy',
-      description: 'This section introduces option selling strategies (specific details reserved for class).',
-      topics: ['Hedging Secrets', 'Risk Management', 'Premium Collection', 'Advanced Techniques'],
+      title: 'Hedging Secrets',
+      description: 'Advanced strategies (details in class)',
       color: 'pink',
     },
     {
       number: '8',
       icon: Settings,
       title: 'Position Sizing',
-      description: 'This section covers risk management and position sizing (details reserved for class).',
-      topics: ['Strategy Modification', 'Strategy Repair', 'Virtual Trading', 'Portfolio Management'],
+      description: 'Risk management techniques (details in class)',
       color: 'teal',
     },
   ];
@@ -85,14 +77,14 @@ export default function Level2Course() {
     <section className="py-24 px-4 sm:px-6 lg:px-8 section-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="container-custom mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block glass-effect text-purple-700 px-6 py-3 rounded-full font-bold mb-6 border-2 border-purple-200 shadow-lg">
+          <div className="inline-block glass-effect text-orange-700 px-6 py-3 rounded-full font-bold mb-6 border-2 border-orange-200 shadow-lg">
             LEVEL 2
           </div>
           <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
@@ -105,7 +97,7 @@ export default function Level2Course() {
         </div>
 
         {/* Course Duration */}
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 mb-12 border-2 border-purple-100">
+        <div className="bg-gradient-to-r from-orange-50 to-green-50 rounded-2xl p-8 mb-12 border-2 border-orange-100">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">10-Day Advanced Program</h3>
@@ -133,7 +125,7 @@ export default function Level2Course() {
                 </div>
 
                 {/* Icon */}
-                <div className={`${colors.bg} w-14 h-14 rounded-xl flex items-center justify-center mb-4`}>
+                <div className={`${colors.bg} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <Icon className={`w-7 h-7 ${colors.icon}`} />
                 </div>
 
@@ -141,33 +133,26 @@ export default function Level2Course() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 pr-12">
                   {module.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {module.description}
                 </p>
-
-                {/* Topics */}
-                <div className="space-y-2">
-                  {module.topics.map((topic, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-700">
-                      <div className={`w-1.5 h-1.5 rounded-full ${colors.icon.replace('text-', 'bg-')} mr-2`}></div>
-                      {topic}
-                    </div>
-                  ))}
-                </div>
               </div>
             );
           })}
         </div>
 
-        {/* Conclusion */}
-        <div className="mt-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-          <h3 className="text-2xl font-bold mb-4">Course Conclusion</h3>
-          <p className="text-lg leading-relaxed">
-            This "Level 2" course provides a comprehensive foundation for traders looking to enhance their
-            technical analysis skills and learn advanced option trading strategies in the Indian market.
-            The course's practical focus and relevance to the local market make it a valuable resource
-            for aspiring and experienced traders alike.
+        {/* CTA */}
+        <div className="mt-16 gradient-bg rounded-2xl p-8 text-white text-center">
+          <h3 className="text-3xl font-bold mb-4">Take Your Trading to the Next Level</h3>
+          <p className="text-lg mb-6 opacity-90">
+            Master advanced strategies and technical analysis with our Level 2 course
           </p>
+          <a
+            href="#contact"
+            className="inline-block px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:scale-105 transition-transform shadow-xl"
+          >
+            Enroll Now
+          </a>
         </div>
       </div>
     </section>

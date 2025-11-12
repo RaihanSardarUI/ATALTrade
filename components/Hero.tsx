@@ -7,9 +7,9 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden section-gradient">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         
         {/* Grid pattern */}
         <div className="absolute inset-0 trading-grid opacity-30"></div>
@@ -18,12 +18,12 @@ export default function Hero() {
       <div className="container-custom mx-auto relative z-10 w-full">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full mb-8 shine-effect border border-blue-200">
-            <Award className="w-5 h-5 text-blue-600 animate-pulse" />
-            <span className="text-sm font-semibold text-blue-700">
+          <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full mb-8 shine-effect border border-green-200">
+            <Award className="w-5 h-5 text-green-600 animate-pulse" />
+            <span className="text-sm font-semibold text-green-700">
               NISM Certified Training Program
             </span>
-            <Sparkles className="w-4 h-4 text-purple-600" />
+            <Sparkles className="w-4 h-4 text-orange-600" />
           </div>
 
           {/* Main Heading */}
@@ -50,7 +50,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-10 py-5 glass-effect text-gray-800 font-bold rounded-2xl border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-300 text-lg hover:scale-105"
+              className="inline-flex items-center justify-center px-10 py-5 glass-effect text-gray-800 font-bold rounded-2xl border-2 border-gray-300 hover:border-green-500 hover:text-green-600 transition-all duration-300 text-lg hover:scale-105"
             >
               Get in Touch
             </a>
@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
               <div className="flex items-center gap-4 mb-3">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-green-500 to-green-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-left">
@@ -72,7 +72,7 @@ export default function Hero() {
 
             <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
               <div className="flex items-center gap-4 mb-3">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-left">
@@ -84,7 +84,7 @@ export default function Hero() {
 
             <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
               <div className="flex items-center gap-4 mb-3">
-                <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-left">

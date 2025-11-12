@@ -47,7 +47,7 @@ export default function Navbar() {
       }`}
     >
       {/* Top accent line */}
-      <div className={`h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}></div>
+      <div className={`h-1 bg-gradient-to-r from-green-600 via-orange-500 to-green-500 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -80,7 +80,7 @@ export default function Navbar() {
                 className={`relative px-5 py-2.5 font-bold transition-all duration-300 rounded-xl group ${
                   activeSection === link.id
                     ? 'text-white'
-                    : 'text-gray-700 hover:text-blue-600'
+                    : 'text-gray-700 hover:text-green-600'
                 }`}
               >
                 {/* Active background */}
@@ -89,7 +89,7 @@ export default function Navbar() {
                 )}
                 
                 {/* Hover background */}
-                <span className="absolute inset-0 bg-blue-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="absolute inset-0 bg-green-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 
                 {/* Label */}
                 <span className="relative z-10">{link.label}</span>
@@ -100,7 +100,7 @@ export default function Navbar() {
                 )}
                 
                 {/* Hover underline */}
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-600 to-orange-500 group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
               </a>
             ))}
             
@@ -143,7 +143,7 @@ export default function Navbar() {
                 className={`block px-5 py-3 rounded-xl font-bold transition-all duration-300 ${
                   activeSection === link.id
                     ? 'gradient-bg text-white shadow-lg'
-                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                    : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >

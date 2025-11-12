@@ -46,7 +46,7 @@ export default function CourseOverview() {
   return (
     <section id="courses" className="py-24 px-4 sm:px-6 lg:px-8 section-white relative overflow-hidden">
       {/* Trading grid background */}
-      <div className="absolute inset-0 chart-pattern opacity-30"></div>
+      <div className="absolute inset-0 chart-pattern opacity-20"></div>
       
       <div className="container-custom mx-auto relative z-10">
         {/* Live Stats Ticker */}
@@ -56,7 +56,7 @@ export default function CourseOverview() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center reveal-animation" style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <BarChart3 className="w-4 h-4 text-blue-600" />
+                    <BarChart3 className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
                       {stat.label}
                     </span>
@@ -107,7 +107,7 @@ export default function CourseOverview() {
                   
                   {/* Progress bar */}
                   <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-600 to-purple-600 bar-grow" style={{ animationDelay: `${index * 200}ms` }}></div>
+                    <div className="h-full bg-gradient-to-r from-green-600 to-orange-500 bar-grow" style={{ animationDelay: `${index * 200}ms` }}></div>
                   </div>
                 </div>
               </div>
