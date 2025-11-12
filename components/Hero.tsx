@@ -4,15 +4,18 @@ import { ArrowRight, TrendingUp, Award, Users, BookOpen, Sparkles } from 'lucide
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden section-gradient">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        
+        {/* Grid pattern */}
+        <div className="absolute inset-0 trading-grid opacity-30"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="container-custom mx-auto relative z-10 w-full">
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 glass-effect px-6 py-3 rounded-full mb-8 shine-effect border border-blue-200">
@@ -24,16 +27,16 @@ export default function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
             Master the Art of
-            <span className="block gradient-text mt-3 text-6xl md:text-8xl lg:text-9xl">Options Trading</span>
+            <span className="block gradient-text mt-4">Options Trading</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed">
             Transform your trading journey with comprehensive courses designed by
-            industry experts. From basic derivatives to advanced strategies,
-            we've got you covered.
+            <span className="font-semibold text-gray-900"> NISM certified experts</span>. 
+            From basic derivatives to advanced strategies.
           </p>
 
           {/* CTA Buttons */}
@@ -54,35 +57,53 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="glass-effect p-8 rounded-3xl shadow-xl card-hover border border-blue-100 group">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-4xl font-black gradient-text">15+</h3>
+                  <p className="text-gray-600 font-semibold text-sm">Years Experience</p>
                 </div>
               </div>
-              <h3 className="text-5xl font-extrabold gradient-text mb-3">15+</h3>
-              <p className="text-gray-700 font-semibold text-lg">Years of Experience</p>
             </div>
 
-            <div className="glass-effect p-8 rounded-3xl shadow-xl card-hover border border-purple-100 group">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="w-8 h-8 text-white" />
+            <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-4xl font-black gradient-text">2</h3>
+                  <p className="text-gray-600 font-semibold text-sm">Course Levels</p>
                 </div>
               </div>
-              <h3 className="text-5xl font-extrabold gradient-text mb-3">2</h3>
-              <p className="text-gray-700 font-semibold text-lg">Comprehensive Levels</p>
             </div>
 
-            <div className="glass-effect p-8 rounded-3xl shadow-xl card-hover border border-green-100 group">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="w-8 h-8 text-white" />
+            <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-4xl font-black gradient-text">4</h3>
+                  <p className="text-gray-600 font-semibold text-sm">Expert Trainers</p>
                 </div>
               </div>
-              <h3 className="text-5xl font-extrabold gradient-text mb-3">4</h3>
-              <p className="text-gray-700 font-semibold text-lg">Expert Trainers</p>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl depth-shadow card-hover group">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-4xl font-black gradient-text">100%</h3>
+                  <p className="text-gray-600 font-semibold text-sm">NISM Certified</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

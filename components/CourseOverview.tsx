@@ -44,11 +44,11 @@ export default function CourseOverview() {
   };
 
   return (
-    <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 relative overflow-hidden">
+    <section id="courses" className="py-24 px-4 sm:px-6 lg:px-8 section-white relative overflow-hidden">
       {/* Trading grid background */}
-      <div className="absolute inset-0 chart-pattern opacity-50"></div>
+      <div className="absolute inset-0 chart-pattern opacity-30"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="container-custom mx-auto relative z-10">
         {/* Live Stats Ticker */}
         <div className="mb-16 overflow-hidden">
           <div className="glass-card rounded-2xl p-6 depth-shadow">

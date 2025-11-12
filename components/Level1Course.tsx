@@ -64,14 +64,14 @@ export default function Level1Course() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 section-gray relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="container-custom mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block glass-effect text-blue-700 px-6 py-3 rounded-full font-bold mb-6 border-2 border-blue-200 shadow-lg">
